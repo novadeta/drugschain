@@ -39,8 +39,7 @@ const Img = [
         alt: "johnson-johnson",
         src: "/assets/images/johnson-johnson.webp",
         width: 130
-    },
-  
+    }
 ]
 export default function Sponsor(){
     return (

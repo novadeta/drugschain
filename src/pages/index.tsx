@@ -3,6 +3,9 @@ import localFont from "next/font/local";
 import Banner from "@/ui/sections/Banner";
 import Navbar from "@/ui/components/Navbar";
 import Feature from "@/ui/sections/Feature";
+import Company from "@/ui/sections/Company";
+import UserGuide from "@/ui/sections/UserGuide";
+import Testimonial from "@/ui/sections/Testimonial";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -20,7 +23,10 @@ export default function Main() {
     <>
       <Navbar/>
       <Banner/>
+      <Company/>
       <Feature/>
+      <UserGuide/>
+      <Testimonial/>
     </>
   );
 }

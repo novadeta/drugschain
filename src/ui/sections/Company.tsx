@@ -12,7 +12,6 @@ export default function Company(){
                     <p className="text-[16px] text-headline">Company</p>
                 </div>
             </ButtonGradient>
-            <h1 className="mt-6 mx-auto text-headline text-4xl text-center font-medium max-w-[570px]">Dipercaya oleh Ribuan Pengguna dan Partner Kesehatan</h1>
             <p className="mt-6 mx-auto text-subHeadline text-xl text-center max-w-[500px]">Kami bekerja sama dengan para pemimpin industri untuk memastikan setiap obat yang Anda terima aman, asli, dan terverifikasi.</p>
             <Sponsor/>
         </section>

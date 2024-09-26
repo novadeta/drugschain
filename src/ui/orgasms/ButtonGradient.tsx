@@ -1,6 +1,6 @@
 import { tw } from "@/lib/utils";
 
-export default function ButtonGradient({children ,className = ""}: {children: React.ReactNode, className:string}) {
+export default function ButtonGradient({children ,className = ""}: {children: React.ReactNode, className?:string}) {
     return (
         <>
         <div className="mx-auto flex gap-2 items-center justify-center">

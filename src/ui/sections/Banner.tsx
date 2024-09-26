@@ -26,9 +26,9 @@ export default function Banner(){
                     </div>
                 </div>
             </ButtonGradient>
-            <div className="border rounded-[30px] relative overflow-hidden mt-[54px]">
+            <div className="rounded-[30px] relative overflow-hidden mt-[54px]">
                 <span className="animate-spin bg-[conic-gradient(from_90deg_at_50%_50%,#549F2E_0%,#0C85F8_100%)] absolute inset-[-1000%]"></span>
-                <Image className=" rounded-[30px] z-10 relative p-[2px]" src={"/assets/images/dashboard.png"} alt="banner" width={847} height={480} />
+                <Image className=" rounded-[30px] z-10 relative p-[2px]" src={"/assets/images/dashboard.png"} alt="banner" width={847} height={480} priority/>
             </div>
         </section>
     )
