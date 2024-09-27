@@ -5,7 +5,7 @@ import { tw } from "@/lib/utils";
 import CardPricing from "../components/CardPricing";
 export default function Pricing(){
     return (
-        <section className="container">
+        <section className="container mt-[104px]">
             <ButtonGradient className="py-2 px-[12px]">
                 <Image src={"./assets/icons/ic-drugschain.svg"} alt="logo" width={31.2} height={12} />
                     <div className="flex gap-1 items-center">
@@ -14,7 +14,7 @@ export default function Pricing(){
             </ButtonGradient>
             <Headline>Paket Harga Drugschain</Headline>
             <SubHeadline className="max-w-[840px]">Pilih paket yang sesuai dengan kebutuhan Anda untuk memastikan pengiriman obat yang aman, transparan, dan efisien.</SubHeadline>
-            <div className="flex justify-center gap-6 max-w-[1184px] mx-auto">
+            <div className="flex justify-center gap-6 max-w-[1184px] mt-16 mx-auto">
                 {
                     benefits.map((item,index) => {
                         return <CardPricing key={index} index={index} {...item}/>
