@@ -6,6 +6,7 @@ import Feature from "@/ui/sections/Feature";
 import Company from "@/ui/sections/Company";
 import UserGuide from "@/ui/sections/UserGuide";
 import Testimonial from "@/ui/sections/Testimonial";
+import Pricing from "@/ui/sections/Pricing";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,6 +28,7 @@ export default function Main() {
       <Feature/>
       <UserGuide/>
       <Testimonial/>
+      <Pricing/>
     </>
   );
 }

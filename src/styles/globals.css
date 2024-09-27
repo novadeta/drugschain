@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .animate-alternate {
+      animation: marquee 40s linear infinite;
+      animation-direction: alternate;  
+    }
+}
+@keyframes marquee {
+    0% {
+        transform: translateX(0); 
+      }
+      45% {
+        transform: translateX(20%);
+      }
+      55% {
+        transform: translateX(20%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
+}
