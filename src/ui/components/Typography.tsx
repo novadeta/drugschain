@@ -6,7 +6,7 @@ interface props {
     className?: string
 }
 
-export const Headline: React.FC<props> = ({children, className = ""} : {children : React.ReactNode, className?: string}) => {
+export const Headline: React.FC<props> = ({children, className = ""}) => {
     return (
         <>
             <h1 className={tw("mt-6 mx-auto text-headline text-4xl text-center font-medium", className)}>{children}</h1>

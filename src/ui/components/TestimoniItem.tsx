@@ -1,4 +1,6 @@
+import { easeInOut, motion } from "framer-motion"
 import Image from "next/image"
+import { useEffect, useRef, useState } from "react"
 
 const Item = [
     {
@@ -38,30 +40,78 @@ const Item = [
     }
 ]
 
+
 export default function TestimoniItem() {
+   
     return (
-        <div className="overflow-hidden mx-auto border max-w-[2200px] ">
+        <div className="overflow-hidden mx-auto max-w-[2200px] ">
             <div className="flex gap-4 mt-16 justify-center w-full min-w-[3200px] ">
-                {
-                    Item.map((item,index) => {
-                        return (
-                            <div key={index} className="flex flex-col w-full gap-4 p-6 bg-[#FFFFFF] group/testimonial animate-alternate">
-                                <div className="flex gap-4 group-hover/testimonial:[animation-play-state:paused]">
-                                    <Image src={item.src} alt={item.alt} width={64} height={64} />
-                                    <div>
-                                        <h3 className="text-base text-headline font-semibold transition-all duration-200">{item.name}</h3>
-                                        <small className="text-base text-subHeadline max-w-[350px]">{item.position}</small>
-                                    </div>
-                                </div>
-                                <div className="flex ">
-                                    <p className="text-[18px] leading-[28px] text-subHeadline max-w-[471px]">{item.content}</p>
-                                </div>
-                            </div>
-                        )
-                    })
-                }
+                <Cart items={Item}/>
             </div>
         </div>
 
+    )
+}
+
+type props = {
+    items : {
+        alt : string,
+        src : string,
+        name : string,
+        position : string,
+        content : string
+    }[]
+}
+
+export const Cart : React.FC<props> = ({items = [] }) => {
+    const [widht, setWidth] = useState(0)
+    const ref = useRef<HTMLDivElement>(null)
+    useEffect(() => {
+       if (ref.current) {
+        setWidth(ref.current.scrollWidth);
+       } 
+    },[])
+    const animation = {
+        start: {
+            x: 0,
+        },
+        end:{
+            x: -widht
+        }
+    }
+    return (
+        <>
+            {
+                Item.map((item,index) => {
+                    return (
+                        <motion.div
+                        ref={ref}
+                        key={index}
+                        variants={animation}
+                        initial="start"
+                        animate="end"
+                        transition={{
+                            repeat: Infinity,
+                            repeatType: "reverse",
+                            repeatDelay: 2,
+                            duration: 10,
+                            ease : "easeInOut"
+                        }}
+                        className="flex flex-col w-full gap-4 p-6 bg-[#FFFFFF]">
+                            <div className="flex gap-4">
+                                <Image src={item.src} alt={item.alt} width={64} height={64} />
+                                <div>
+                                    <h3 className="text-base text-headline font-semibold transition-all duration-200">{item.name}</h3>
+                                    <small className="text-base text-subHeadline max-w-[350px]">{item.position}</small>
+                                </div>
+                            </div>
+                            <div className="flex ">
+                                <p className="text-[18px] leading-[28px] text-subHeadline max-w-[471px]">{item.content}</p>
+                            </div>
+                        </motion.div>
+                    )
+                })
+            }
+        </>
     )
 }
