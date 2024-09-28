@@ -1,4 +1,5 @@
 import { tw } from "@/lib/utils"
+import { motion } from "framer-motion"
 import Image from "next/image"
 
 export default function CardPricing({index = 0,title = "",description = "",price = "",benefit = [{ status : false, content : ""}]}) {
@@ -11,7 +12,9 @@ export default function CardPricing({index = 0,title = "",description = "",price
                 {description}
             </p>
             <p  className={tw("mt-5 font-semibold text-[56px]",index == 1 && "text-white")}>{price} <span className="font-light text-base">/ Bulan</span></p>
-            <button className={tw("mt-6 border-[1.5px] border-primary rounded py-[12.5px] w-full font-semibold text-base",index == 1 && "text-primary bg-white")}>Get Started Now</button>
+            <motion.button 
+            whileTap={{scale: 0.95}}
+            className={tw("mt-6 border-[1.5px] border-primary rounded py-[12.5px] w-full font-semibold text-base transition-all",index == 1 && "text-primary bg-white")}>Get Started Now</motion.button>
             <div className="mt-10 flex flex-col gap-[12px]">
                     {
                         benefit.map((item,i) => {

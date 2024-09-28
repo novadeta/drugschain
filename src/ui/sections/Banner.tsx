@@ -1,7 +1,7 @@
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import { motion } from "framer-motion";
 const ButtonGradient = dynamic(() => import("../orgasms/ButtonGradient"), { ssr: false });
-
 export default function Banner(){
     return (
         <section className="container mt-[86px] max-w-[847px] ">
@@ -26,10 +26,26 @@ export default function Banner(){
                     </div>
                 </div>
             </ButtonGradient>
-            <div className="rounded-[30px] relative overflow-hidden mt-[54px]">
+            <motion.div
+                initial={{opacity:0,y:0}}
+                whileInView={{opacity: 1}}
+                animate={{y:20}}
+                transition={{
+                    y :{
+                        repeat: Infinity,
+                        repeatType: "reverse",
+                        duration: 1.5,
+                        ease : "easeInOut"
+                    },
+                    opacity: {
+                        repeat: 0,
+                    }
+                }}
+                className="rounded-[30px] relative overflow-hidden mt-[54px]"
+                >
                 <span className="animate-spin bg-[conic-gradient(from_90deg_at_50%_50%,#549F2E_0%,#0C85F8_100%)] absolute inset-[-1000%]"></span>
                 <Image className=" rounded-[30px] z-10 relative p-[2px]" src={"/assets/images/dashboard.png"} alt="banner" width={1280} height={480} priority/>
-            </div>
+            </motion.div>
         </section>
     )
 }

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import Image from "next/image"
 
 const Icon = [
@@ -40,7 +41,7 @@ export default function FeatureItem() {
                             <div className="absolute top-0 bottom-0 left-0 h-full w-[2px] bg-headline" />
                             <div className="relative px-9">
                                 <div className="absolute top-0 bottom-0 left-0 h-6 group-hover/features:h-10 w-2 rounded-tr-full rounded-br-full bg-headline group-hover/features:bg-primary transition-all duration-200 " />
-                                <h3 className="text-2xl group-hover/features:translate-x-2 group-hover/features:text-primary text-headline font-semibold transition-all duration-200">{item.title}</h3>
+                                <motion.h3 transition={{type: 'spring' , duration: 0.55}} className="text-2xl group-hover/features:translate-x-2 group-hover/features:text-primary text-headline font-semibold transition-all duration-200">{item.title}</motion.h3>
                                 <p className="mt-[14px] text-[20px] text-subHeadline max-w-[350px]">{item.content}</p>
                             </div>
                         </div>
