@@ -14,7 +14,7 @@ export default function CardPricing({index = 0,title = "",description = "",price
             <h4 className={tw("font-bold text-2xl text-headline",index == 1 && "text-white")}>
                 {title}
             </h4>
-            <p className={tw("text-base text-subHeadline",index == 1 && "text-white")}>
+            <p className={tw("text-base text-subHeadline mt-[11px]",index == 1 && "text-white")}>
                 {description}
             </p>
             <p  className={tw("mt-5 font-semibold text-[56px]",index == 1 && "text-white")}>{price} <span className="font-light text-base">/ Bulan</span></p>
