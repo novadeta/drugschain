@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Company from "./Company"
 import dynamic from "next/dynamic"
 import { Headline, SubHeadline } from "../components/Typography";
 import FeatureItem from "../components/FeatureItem";

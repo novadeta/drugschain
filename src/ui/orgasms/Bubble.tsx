@@ -1,5 +1,3 @@
-import { tw } from "@/lib/utils";
-
 export default function Bubble() {
     return (
         <>

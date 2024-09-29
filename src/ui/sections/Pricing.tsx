@@ -1,7 +1,6 @@
 import Image from "next/image";
 import ButtonGradient from "../orgasms/ButtonGradient";
 import { Headline, SubHeadline } from "../components/Typography";
-import { tw } from "@/lib/utils";
 import CardPricing from "../components/CardPricing";
 export default function Pricing(){
     return (

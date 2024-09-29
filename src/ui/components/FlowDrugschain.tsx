@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import React from 'react'
 import { IconWork } from '../orgasms/IconWork'
 
@@ -21,13 +20,5 @@ export default function FlowDrugschain(){
                 </div>
             </div>
         </>
-    )
-}
-
-const Circle: React.FC<{children : React.ReactNode}> = ({children} : {children : React.ReactNode}) => {
-    return (
-        <div className="flex items-center justify-center p-[14px] w-[72px] rounded-[20px] bg-[#EDEDED]">
-            {children}
-        </div>
     )
 }

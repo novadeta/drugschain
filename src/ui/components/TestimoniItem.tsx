@@ -1,6 +1,6 @@
-import { AnimatePresence, motion } from "framer-motion"
+import { motion } from "framer-motion"
 import Image from "next/image"
-import { useEffect, useLayoutEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 
 export default function TestimoniItem() {
