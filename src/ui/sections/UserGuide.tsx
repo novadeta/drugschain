@@ -7,7 +7,7 @@ export default function UserGuide(){
     return (
         <section id="work" className="container mt-[104px] px-3 md:px-0 scroll-mt-9">
             <ButtonGradient href="#work" className="py-2 px-[12px]">
-                <Image src={"./assets/icons/ic-drugschain.svg"} alt="logo" width={31.2} height={12} />
+                <Image src={"./assets/icons/ic-drugschain.svg"} alt="logo" width={31.2} height={31.2} />
                 <div className="flex gap-1 items-center">
                     <p className="text-[16px] text-headline">how it work</p>
                 </div>

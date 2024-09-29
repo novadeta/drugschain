@@ -65,7 +65,6 @@ export default function Navbar(){
         const windowScroll = () => {
             setScrollY(window.scrollY);
             if (scrollY < 100 || scrollY > window.scrollY) {
-                console.log(scrollY);
                 setVisible(true);
             }
             else {
@@ -83,14 +82,14 @@ export default function Navbar(){
                 variants={navbarVariants}
                 initial="visible"
                 animate={visible ? "visible" : "hidden"}
-                className={tw('fixed z-50 top-0 py-[20px] shadow-[0_16px_16px_0px_rgba(0,0,0,0.09)] md:rounded-[60px] inset-x-0 w-full bg-white/50 backdrop-blur-lg  md:container md:max-w-[800px] md:py-[14px] md:px-6 flex flex-col md:flex-row md:items-center md:gap-[40.8px] md:mt-[34px]',(scrollY <= 0)? "md:relative" : "md:fixed")}>
+                className={tw('fixed z-50 top-0 py-[0px] shadow-[0_16px_16px_0px_rgba(0,0,0,0.09)] md:rounded-[60px] inset-x-0 w-full bg-white/50 backdrop-blur-lg  md:container md:max-w-[800px] md:py-[14px] md:px-6 flex flex-col md:flex-row md:items-center md:gap-[40.8px] md:mt-[34px]',(scrollY <= 100)? "relative md:relative" : "md:fixed")}>
                 <nav className='py-6 px-6 relative transition-all md:py-0'>
-                    <Image src="./assets/icons/ic-full-drugschain.svg" alt="logo" width={192} height={25} className='mt-1 block md:hidden' />
+                    <Image src="./assets/icons/ic-full-drugschain.svg" alt="logo" width={192} height={192} className='mt-1 block md:hidden' />
                     <div 
                         onClick={() => { setOpen(!open)}}
                         className='cursor-pointer absolute md:hidden top-3 right-3'>
 
-                            {open ? <Image src="./assets/icons/ic-close.svg" alt="logo" width={50} height={25} className='mt-1' /> : <Image src="./assets/icons/ic-slider.svg" alt="logo" width={50} height={25} className='mt-1' /> }
+                            {open ? <Image src="./assets/icons/ic-close.svg" alt="logo" width={50} height={50} className='mt-1' /> : <Image src="./assets/icons/ic-slider.svg" alt="logo" width={50} height={50} className='mt-1' /> }
                     </div>
                     <AnimatePresence>
                         {open && <NavbarMobile open={open} />}
@@ -101,7 +100,7 @@ export default function Navbar(){
                         animate={{opacity: open ? 0 : 1, display: open ? "none" : "block"}}
                         href='#'
                         >
-                            <Image src="/assets/icons/ic-full-drugschain.svg" alt="logo" width={192} height={25} className='mt-1' />
+                            <Image src="/assets/icons/ic-full-drugschain.svg" alt="logo" width={192} height={192} className='mt-1' />
                         </motion.a>
                         <motion.ul 
                             variants={container}

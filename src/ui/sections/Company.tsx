@@ -7,7 +7,7 @@ export default function Company(){
     return (
         <section id="company" className="container mt-[86px] max-w-[1200px] scroll-mt-9">
             <ButtonGradient href="#company" className={"py-2 px-[12px]"}>
-                <Image src={"./assets/icons/ic-drugschain.svg"} alt="logo" width={31.2} height={12} />
+                <Image src={"./assets/icons/ic-drugschain.svg"} alt="logo" width={31.2} height={31.2} />
                 <div className="flex gap-1 items-center">
                     <p className="text-[16px] text-headline">Company</p>
                 </div>

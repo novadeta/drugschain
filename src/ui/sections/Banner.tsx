@@ -6,7 +6,7 @@ export default function Banner(){
     return (
         <section className="container mt-[86px] max-w-[847px] px-3 md:px-0 scroll-mt-9">
                <ButtonGradient href="#" className={"py-2 px-[12px]"}>
-                    <Image src={"./assets/icons/ic-drugschain.svg"} alt="logo" width={31.2} height={12} />
+                    <Image src={"./assets/icons/ic-drugschain.svg"} alt="logo" width={31.2} height={31.2} />
                     <div className="flex gap-1 items-center">
                         <p className="text-[16px] text-headline">is currently in beta </p>
                         <Image src={"./assets/icons/ic-arrow-right.svg"} alt="icon next" width={7.2} height={7.2} />
@@ -44,7 +44,7 @@ export default function Banner(){
                 className="rounded-[30px] relative overflow-hidden mt-[54px] shadow-[0_30px_30px_0_rgba(0,0,0,0.09)]"
                 >
                 <span className="animate-spin bg-[conic-gradient(from_90deg_at_50%_50%,#549F2E_0%,#0C85F8_100%)] absolute inset-[-1000%]"></span>
-                <Image className="rounded-[30px] z-10 relative p-[2px]" src={"/assets/images/dashboard.png"} alt="banner" width={1280} height={480} priority/>
+                <Image className="rounded-[30px] z-10 relative p-[2px]" src={"/assets/images/dashboard.png"} alt="banner" width={1280} height={1280} priority/>
             </motion.div>
         </section>
     )
