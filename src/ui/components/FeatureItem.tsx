@@ -36,7 +36,7 @@ export default function FeatureItem() {
                     return (
                         <div key={index} className="flex flex-col group/features relative">
                             <div className="px-9  z-10 mb-6">
-                                <Image src={item.src} alt={item.alt} width={34} height={64} />
+                                <Image src={item.src} alt={item.alt} width={34} height={64}/>
                             </div>
                             <div className="absolute top-0 bottom-0 left-0 h-full w-[2px] bg-headline" />
                             <div className="relative px-9">

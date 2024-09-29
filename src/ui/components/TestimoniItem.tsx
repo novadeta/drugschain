@@ -6,7 +6,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react"
 export default function TestimoniItem() {
    
     return (
-        <div className="overflow-hidden mx-auto max-w-[1440px] ">
+        <div className="overflow-hidden mx-auto max-w-[1440px]">
                 <Cart items={Item['testi-1']} type="normal" />
                 <Cart items={Item['testi-2']} type="reverse"/>
                 <Cart items={Item['testi-3']} type="normal"/>
@@ -29,15 +29,14 @@ type props = {
 export const Cart : React.FC<props> = ({items = [], type = ""}) => {
     const [width, setWidth] = useState(0)
     const ref = useRef<HTMLDivElement>(null)
-    const [direction, setDirection] = useState(type);
-    useLayoutEffect(() => {
+    useEffect(() => {
        if (ref.current) {
         setWidth(ref.current.scrollWidth);
        } 
     },[items])
     const animationVariants = {
         initial: (direction : string) => ({
-            x: direction === "reverse" ? -width : 0,
+            x: direction === "reverse" ? -513 : 0,
         }),
 
         animate: (direction : string) => ({
@@ -45,7 +44,7 @@ export const Cart : React.FC<props> = ({items = [], type = ""}) => {
         }),
     };
     return (
-        <div className="flex gap-4 mt-16 justify-center w-full min-w-[2100px] ">
+        <div className="flex gap-4 mt-16 justify-center w-full min-w-[2100px]">
             {
                 items.map((item,index) => {
                     return (
@@ -63,7 +62,7 @@ export const Cart : React.FC<props> = ({items = [], type = ""}) => {
                             duration: 10,
                             ease : "easeInOut"
                         }}
-                        className="flex flex-col w-full max-w-[519px] gap-4 p-6 bg-[#FFFFFF]">
+                        className="flex flex-col w-full max-w-[519px] gap-4 p-6 bg-[#FFFFFF] hover:shadow-2xl cursor-pointer">
                             <div className="flex gap-4">
                                 <Image src={item.src} alt={item.alt} width={64} height={64} />
                                 <div>

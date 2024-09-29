@@ -3,7 +3,7 @@ import { Headline } from "../components/Typography"
 
 export default function Faq(){
     return (
-        <section className="container mt-[104px]">
+        <section id="faq" className="container mt-[104px] px-3 md:px-0 scroll-mt-9">
             <Headline>Pertanyaan yang Sering Diajukan</Headline>
             <div className="mt-[50px] flex flex-col max-w-[570px] justify-center mx-auto">
                 {

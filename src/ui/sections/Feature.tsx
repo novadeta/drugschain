@@ -7,8 +7,8 @@ const ButtonGradient = dynamic(() => import("../orgasms/ButtonGradient"), { ssr:
 export default function Feature(){
     return (
         <>
-        <section className="container mt-[60px]">
-            <ButtonGradient className={"py-2 px-[12px]"}>
+        <section id="features" className="container mt-[60px] scroll-mt-9">
+            <ButtonGradient href="#features" className={"py-2 px-[12px]"}>
                 <div className="flex gap-1 items-center">
                     <Image src={"./assets/icons/ic-drugschain.svg"} alt="logo" width={31.2} height={12} />
                     <p className="text-[16px] text-headline">Features</p>

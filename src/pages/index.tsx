@@ -9,6 +9,7 @@ import Testimonial from "@/ui/sections/Testimonial";
 import Pricing from "@/ui/sections/Pricing";
 import Faq from "@/ui/sections/Faq";
 import Footer from "@/ui/components/Footer";
+import Bubble from "@/ui/orgasms/Bubble";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -24,6 +25,7 @@ const geistMono = localFont({
 export default function Main() {
   return (
     <>
+      <Bubble/>
       <Navbar/>
       <Banner/>
       <Company/>
