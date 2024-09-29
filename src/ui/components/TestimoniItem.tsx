@@ -62,7 +62,7 @@ export const Cart : React.FC<props> = ({items = [], type = ""}) => {
                             duration: 10,
                             ease : "easeInOut"
                         }}
-                        className="flex flex-col w-full max-w-[519px] gap-4 p-6 bg-[#FFFFFF] hover:shadow-2xl cursor-pointer">
+                        className="flex flex-col w-full max-w-[519px] gap-4 p-6 bg-[#FFFFFF] hover:shadow-xl transition-all cursor-pointer">
                             <div className="flex gap-4">
                                 <Image src={item.src} alt={item.alt} width={64} height={64} />
                                 <div>

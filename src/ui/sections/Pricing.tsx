@@ -28,7 +28,7 @@ const benefits = [
     {
         title : 'Basic Plan',
         description : 'Cocok untuk apotek atau klinik kecil yang ingin mulai memanfaatkan teknologi blockchain untuk pelacakan obat dan keamanan dasar.',
-        price : 'Rp. 0',
+        price : 'Rp 0',
         benefit : [
             {
                 status : true,

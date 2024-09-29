@@ -84,7 +84,7 @@ export default function Navbar(){
                 animate={visible ? "visible" : "hidden"}
                 className={tw('fixed z-50 top-0 py-[0px] shadow-[0_16px_16px_0px_rgba(0,0,0,0.09)] md:rounded-[60px] inset-x-0 w-full bg-white/50 backdrop-blur-lg  md:container md:max-w-[800px] md:py-[14px] md:px-6 flex flex-col md:flex-row md:items-center md:gap-[40.8px] md:mt-[34px]',(scrollY <= 100)? "relative md:relative" : "md:fixed")}>
                 <nav className='py-6 px-6 relative transition-all md:py-0'>
-                    <Image src="./assets/icons/ic-full-drugschain.svg" alt="logo" width={192} height={192} className='mt-1 block md:hidden' />
+                    <Image src="./assets/icons/ic-full-drugschain.svg" alt="logo-drugschain" width={192} height={192} className='mt-1 block md:hidden' />
                     <div 
                         onClick={() => { setOpen(!open)}}
                         className='cursor-pointer absolute md:hidden top-3 right-3'>
