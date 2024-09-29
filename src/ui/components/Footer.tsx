@@ -4,7 +4,9 @@ export default function Footer(){
         <>
             <footer className='container py-10 md:py-[104px] flex gap-10 lg:gap-0 flex-wrap md:flex-nowrap items-start justify-start lg:justify-between mt-[34px] px-3 md:px-0'>
                 <div className='flex flex-col gap-5 md:gap-[10px] w-full md:w-auto'>
-                    <Image src="./assets/icons/ic-drugschain-full-2.svg" alt="logo" width={205} height={25} className='mt-1' />
+                    <a href="#">
+                        <Image src="./assets/icons/ic-drugschain-full-2.svg" alt="logo" width={205} height={25} className='mt-1' />
+                    </a>
                     <p className=' text-xl tracking-normal text-subHeadline md:max-w-[360px]'>Keamanan dalam pengiriman obat. Melindungi obat, resep, pembayaran, hingga sertifikasi.</p>
                 </div>
                 <ul className='flex flex-col items-start gap-2'>
