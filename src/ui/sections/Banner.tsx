@@ -43,7 +43,6 @@ export default function Banner(){
                 }}
                 className="rounded-[30px] relative overflow-hidden mt-[54px] shadow-[0_30px_30px_0_rgba(0,0,0,0.09)]"
                 >
-                <span className="animate-spin bg-[conic-gradient(from_90deg_at_50%_50%,#549F2E_0%,#0C85F8_100%)] absolute inset-[-1000%]"></span>
                 <Image className="rounded-[30px] z-10 relative p-[2px]" src={"/assets/images/dashboard.webp"} alt="banner" width={1280} height={1280} priority/>
             </motion.div>
         </section>

@@ -25,16 +25,16 @@ export default function CardPricing({index = 0,title = "",description = "",price
                     {
                         benefit.map((item,i) => {
                             return (
-                                <div key={i} className={tw("flex items-center gap-[17px]", index === 1 && "text-white")}>
-                                    <div className={tw("p-2 rounded-full", item.status && "bg-[#E8FBEA]", !item.status && "bg-[#F5FAF4]")}>
+                                <div key={i} className={tw("flex items-center justify-start gap-[17px]", index === 1 && "text-white")}>
                                         <Image 
                                             src={item.status ? "./assets/icons/ic-check-success.svg" : "./assets/icons/ic-close.svg"} 
                                             alt="icon-check" 
-                                            width={16} 
-                                            height={16}
+                                            width={32} 
+                                            height={32}
                                             />
-                                    </div>
+                                    <div>
                                         <p className={tw("font-medium text-xs ", item.status ? "text-headline" : "text-subHeadline", index == 1 && "text-white")}>{item.content}</p>
+                                    </div>
                                 </div>
                             )
                         })
