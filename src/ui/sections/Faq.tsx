@@ -39,18 +39,18 @@ const data = [
     },
     {
         name: "Apakah ada batasan transaksi untuk setiap paket?",
-        content: ""
+        content: "Ya, ada batasan transaksi yang berlaku untuk setiap paket yang ditawarkan di Drugschain. Namun, paket ini dirancang untuk memenuhi berbagai kebutuhan anda, mulai dari skala kecil hingga besar. Anda dapat memilih paket yang sesuai dengan kebutuhan anda."
     },
     {
         name: "Apakah saya bisa meng-upgrade paket saya di kemudian hari?",
-        content: ""
+        content: "Anda dapat mengupgrade paket Drugschain Anda di kemudian hari sesuai kebutuhan anda. Proses upgrade ini dirancang untuk fleksibilitas, sehingga Anda dapat meningkatkan layanan dan fitur yang tersedia dalam paket yang dipilih."
     },
     {
         name: "Apakah Drugschain dapat diintegrasikan dengan sistem lain?",
-        content: ""
+        content: "Ya, Drugschain dapat diintegrasikan dengan sistem lain melalui API kami. Hal ini memungkinkan Anda untuk menghubungkan platform Drugschain dengan sistem manajemen inventaris, ERP, atau platform bisnis lainnya, sehingga memudahkan pengelolaan rantai pasokan obat secara terpadu."
     },
     {
         name: "Bagaimana saya bisa memulai dengan Drugschain?",
-        content: ""
+        content: "Untuk memulai, Anda hanya perlu mendaftar di platform kami dan memilih paket yang sesuai dengan kebutuhan bisnis Anda. Setelah itu, tim kami akan membantu Anda dalam proses setup dan integrasi, sehingga Anda dapat segera menggunakan layanan Drugschain dengan lancar."
     }
 ]
