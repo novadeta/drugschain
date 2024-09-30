@@ -10,7 +10,7 @@ export default function FaqItem({name = "", content = ""}: {name: string, conten
             onClick={() => setOpen(!open)}
             className="cursor-pointer">
             <div className="flex justify-between py-6">
-                <h4 className="font-medium text-[15.9px] text-headline">
+                <h4 className="font-medium text-[14px] md:text-[15.9px] text-headline">
                     {name}
                 </h4>
                 <Image className={tw("transition-all", open ? "rotate-90" : "rotate-0")} src={"./assets/icons/ic-arrow-right.svg"} alt="icon next" width={7.2} height={7.2} />
@@ -24,7 +24,7 @@ export default function FaqItem({name = "", content = ""}: {name: string, conten
                     duration: 0.3,
                 }}
                 >
-                <p className={"text-[15.6px] pb-[21px]  leading-[24px] text-subHeadline overflow-hidden"}>
+                <p className={"text-[12px] md:text-[15.6px] pb-[21px]  leading-[24px] text-subHeadline overflow-hidden"}>
                     {content}
                 </p>
                 </motion.div>

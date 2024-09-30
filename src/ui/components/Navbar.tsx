@@ -61,8 +61,12 @@ export default function Navbar(){
             transition: { duration: 0.3 }
           }
     }
+    function handleClick(){
+        setOpen(!open);
+    }
     useEffect(() => {
         const windowScroll = () => {
+
             setScrollY(window.scrollY);
             if (scrollY < 100 || scrollY > window.scrollY) {
                 setVisible(true);
@@ -87,12 +91,20 @@ export default function Navbar(){
                     <Image src="./assets/icons/ic-full-drugschain.svg" alt="logo-drugschain" width={192} height={192} className='mt-1 block md:hidden' />
                     <div 
                         onClick={() => { setOpen(!open)}}
-                        className='cursor-pointer absolute md:hidden top-3 right-3'>
-
-                            {open ? <Image src="./assets/icons/ic-close.svg" alt="logo" width={50} height={50} className='mt-1' /> : <Image src="./assets/icons/ic-slider.svg" alt="logo" width={50} height={50} className='mt-1' /> }
+                        className='cursor-pointer absolute  md:hidden top-3 right-3'>
+                            {
+                                open 
+                                ? 
+                                <Image src="./assets/icons/ic-close.svg" alt="logo" width={30} height={30} className='mt-3' /> 
+                                : 
+                                <svg xmlns="http://www.w3.org/2000/svg" className='mt-3' height={30} width={30} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" >
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /> 
+                                </svg>
+                            }
+                                                                                                                                       
                     </div>
                     <AnimatePresence>
-                        {open && <NavbarMobile open={open} />}
+                        {open && <NavbarMobile changeOpen={() => handleClick()} open={open} />}
                     </AnimatePresence>
                     <div className='hidden md:flex md:flex-row items-center gap-5 md:gap-[40.8px]'>
                         <motion.a
@@ -130,7 +142,10 @@ export default function Navbar(){
     )
 }
 
-export function NavbarMobile({open}:{open: boolean})  {
+export function NavbarMobile({changeOpen,open}:{changeOpen: () => void,open: boolean})  {
+    const sendOpen = () => {
+        changeOpen()
+    }
     return (
         <>
         <div className='md:hidden flex flex-col items-center mt-10 justify-center'>
@@ -141,16 +156,16 @@ export function NavbarMobile({open}:{open: boolean})  {
                 exit={"hidden"}
                 className='flex flex-col md:flex-row items-center gap-[40.8px] w-full'>
                     <motion.li variants={childrenItem} className='text-[16px] text-headline hover:text-primary transition-colors'>
-                        <a href="#features">Features</a>
+                        <a href="#features" onClick={() => sendOpen()}>Features</a>
                     </motion.li>
                     <motion.li variants={childrenItem} className='text-[16px] text-headline hover:text-primary transition-colors'>
-                        <a href="#testimonial">Testimonial</a>
+                        <a href="#testimonial" onClick={() => sendOpen()}>Testimonial</a>
                     </motion.li>
                     <motion.li variants={childrenItem} className='text-[16px] text-headline hover:text-primary transition-colors'>
-                        <a href="#pricing">Pricing</a>
+                        <a href="#pricing" onClick={() => sendOpen()}>Pricing</a>
                     </motion.li>
                     <motion.li variants={childrenItem} className='text-[16px] text-headline hover:text-primary transition-colors'>
-                        <a href="#faq">FAQ</a>
+                        <a href="#faq" onClick={() => sendOpen()}>FAQ</a>
                     </motion.li>
                     <motion.li variants={childrenItem}>
                         <motion.button className='bg-primary text-[16px] py-[6px] text-white rounded-[50px] px-4 leading-6'>Get Started</motion.button>
@@ -160,3 +175,5 @@ export function NavbarMobile({open}:{open: boolean})  {
         </>
     )
 }
+
+

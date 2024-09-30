@@ -10,7 +10,7 @@ export default function CardPricing({index = 0,title = "",description = "",price
         exit={{ x: direction,opacity: 0 }} 
         transition={{duration: 0.5}}
         viewport={{ once: true ,amount: 0.5}}
-        className={tw("py-10 px-6 rounded-[12px] relative", index == 1 ?"bg-primary z-10" : "bg-white z-0")}>
+        className={tw("py-10 px-6 rounded-[12px] relative", index == 1 ?"bg-primary z-20" : "bg-white z-0")}>
             <h4 className={tw("font-bold text-2xl text-headline",index == 1 && "text-white")}>
                 {title}
             </h4>
@@ -34,7 +34,7 @@ export default function CardPricing({index = 0,title = "",description = "",price
                                             height={16}
                                             />
                                     </div>
-                                        <p className={tw("font-medium", item.status ? "text-headline" : "text-subHeadline", index == 1 && "text-white")}>{item.content}</p>
+                                        <p className={tw("font-medium text-xs ", item.status ? "text-headline" : "text-subHeadline", index == 1 && "text-white")}>{item.content}</p>
                                 </div>
                             )
                         })

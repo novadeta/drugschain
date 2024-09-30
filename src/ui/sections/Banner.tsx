@@ -12,7 +12,7 @@ export default function Banner(){
                         <Image src={"./assets/icons/ic-arrow-right.svg"} alt="icon next" width={7.2} height={7.2} />
                     </div>
                </ButtonGradient>
-            <h1 className="mt-6 text-[64px] tracking-[-3.69px] leading-[62.7px] text-headline text-center font-medium">
+            <h1 className="mt-6 text-[44px] md:text-[64px]  md:tracking-[-3.69px] leading-[62.7px] text-headline text-center font-medium">
                 Masa Depan Pengiriman Obat yang Aman dan Transparan
             </h1>
             <p className="mt-[34px] mb-11 text-xl leading-[26px] text-headline/50 max-w-[705px] mx-auto text-center">
