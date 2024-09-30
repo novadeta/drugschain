@@ -1,15 +1,11 @@
 ## Drugschain
-Drugschain adalah platform berbasis blockchain yang menyediakan solusi pelacakan rantai pasokan obat, keamanan resep digital, dan pengelolaan pengiriman dengan smart contracts. Kami memastikan bahwa setiap obat yang dikirimkan dapat dilacak secara transparan dan aman, serta diverifikasi keasliannya.
+Drugschain is a blockchain-based platform that provides drug supply chain tracking solutions, digital prescription security, and delivery management with smart contracts. We ensure that every medicine sent can be traced transparently and safely, as well as guaranteeing its authenticity.
 
-## Profil Pengembang
+## Profile Creator
+-- Ade Oktaviano Arrahman (Programmer)
+-- Wahyudi (UI/UX Designer)
 
-- Nama Tim: Nawasena
-- Anggota:
-
-A. Ade Oktaviano Arrahman (Programmer)
-B. Wahyudi (UI/UX Designer)
-
-## Cara Menjalankan
+## Getting Started
 
 - Install `npm install`.
 - Jalankan Perintah `npm run dev`
