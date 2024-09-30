@@ -3,7 +3,7 @@ Drugschain is a blockchain-based platform that provides drug supply chain tracki
 
 ## Profile Creator
 - Ade Oktaviano Arrahman (Programmer)
- Wahyudi (UI/UX Designer)
+- Wahyudi (UI/UX Designer)
 
 ## Getting Started
 
